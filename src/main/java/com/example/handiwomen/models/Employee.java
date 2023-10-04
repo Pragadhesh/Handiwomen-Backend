@@ -4,6 +4,8 @@ package com.example.handiwomen.models;
 import javax.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 
 @Entity
 @Table(name = "Employee")
@@ -20,10 +22,12 @@ public class Employee {
 
     private String name;
 
-    @Column(unique = true)
     private String email;
 
     private Integer age;
+
+    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<DailyTask> dailyTasks;
 
     public Employee(String name, String email, Integer age) {
         this.name = name;

@@ -1,9 +1,9 @@
 package com.example.handiwomen.repository;
 
-import com.example.handiwomen.models.Employee;
+import com.example.handiwomen.models.DailyTask;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface EmployeeRepository extends JpaRepository<Employee,Long> {
+public interface TaskRepository extends JpaRepository<DailyTask,String> {
 }

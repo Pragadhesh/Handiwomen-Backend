@@ -2,7 +2,7 @@ package com.example.handiwomen.controller;
 
 import com.example.handiwomen.request.Employeedata;
 
-import com.example.handiwomen.service.EmployeeService;
+import com.example.handiwomen.service.Employee.impl.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +16,7 @@ import javax.validation.Valid;
 
 @RestController
 @Validated
+@CrossOrigin(origins = "*")
 public class EmployeeController {
 
     private static final Logger LOG = LoggerFactory.getLogger(EmployeeController.class);
